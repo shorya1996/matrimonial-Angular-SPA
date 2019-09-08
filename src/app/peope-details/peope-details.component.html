@@ -1,0 +1,41 @@
+<div class="card text-center">
+    <img class="img-fluid" [src]="info.frontImageUrl" />
+    <div class="card-header">
+        {{info.Name}}
+        <button (click)='cancel()' type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{info.Religion}}</h5>
+        <p class="card-text">{{info.Gender}}</p>
+        <table class="table table-sm">
+            <thead>
+                <th>
+                    Caste
+                </th>
+                <th>
+                    Height
+                </th>
+                <th>
+                    salary
+                </th>
+                <th>
+                    Intersted In
+                </th>
+            </thead>
+            <tbody>
+                <tr class="table-warning">
+                    <td>{{info.caste}}</td>
+                    <td>{{info.Height}}</td>
+                    <td>{{info.salary| currency:"₹"}}</td>
+                    <td>{{info.interested_in}}</td>
+                </tr>
+            </tbody>
+
+        </table>
+        <form class="form-inline">
+            <a (click)='MatchIt()' class="btn btn-warning">Its A Match</a>
+        </form>
+    </div>
+</div>
